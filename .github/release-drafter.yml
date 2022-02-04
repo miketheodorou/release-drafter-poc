@@ -12,6 +12,17 @@ categories:
       - "bug"
   - title: "🧰 Maintenance"
     label: "chore"
+autolabeler:
+  - label: "feature"
+    branch:
+      - "/feature.+/"
+    title:
+      - "/feature/i"
+  - label: "bug"
+    branch:
+      - "/fix.+/"
+    title:
+      - "/fix|bugfix|bug/i"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
 version-resolver:
