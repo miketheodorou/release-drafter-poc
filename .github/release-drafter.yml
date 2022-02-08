@@ -1,17 +1,34 @@
-name-template: "v$RESOLVED_VERSION 🌈"
+name-template: "v$RESOLVED_VERSION"
 tag-template: "v$RESOLVED_VERSION"
+commitish: "release"
 categories:
   - title: "🚀 Features"
     labels:
       - "feature"
-      - "enhancement"
   - title: "🐛 Bug Fixes"
     labels:
       - "fix"
-      - "bugfix"
-      - "bug"
   - title: "🧰 Maintenance"
     label: "chore"
+autolabeler:
+  - label: "feature"
+    branch:
+      - "/feature/"
+    title:
+      - "/feature/i"
+  - label: "fix"
+    branch:
+      - "/fix/"
+    title:
+      - "/fix|bugfix|bug/i"
+  - label: "chore"
+    branch:
+      - "/chore|general/i"
+    title:
+      - "/chore|general/i"
+replacers:
+  - search: /(FTP-\d{4})/gi
+    replace: https://atlassian.net/browse/$1
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
 version-resolver:
