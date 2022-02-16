@@ -26,7 +26,7 @@ autolabeler:
 exclude-labels:
   - "release"
 replacers:
-  - search: /(FTP(-|\s)\d{4})/gi
+  - search: /(FTP-\d{4})/gi
     replace: "[$1](https://atlassian.net/browse/$1)"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
