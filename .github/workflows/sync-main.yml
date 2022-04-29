@@ -14,4 +14,4 @@ jobs:
         with:
           ref: "feature"
       - name: Rebase main branch
-        run: git rebase main
+        run: git rebase origin/main
