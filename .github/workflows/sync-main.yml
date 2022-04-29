@@ -1,0 +1,16 @@
+name: Sync main
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync_main_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v2
+        with:
+          ref: "feature"
+        run: git rebase main
