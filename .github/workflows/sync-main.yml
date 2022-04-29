@@ -11,11 +11,13 @@ jobs:
     steps:
       - name: Checkout feature branch
         uses: actions/checkout@v2
+        with:
+          ref: "feature"
       - name: Rebase main branch
         run: |
           git config --global user.email "${GITHUB_ACTOR}"
           git config --global user.name "${GITHUB_ACTOR}@users.noreply.github.com"
-          git checkout feature
-          git rebase main
+          echo "$DEFAULT_BRANCH"
+          git rebase "$DEFAULT_BRANCH"
           git push
           git status
