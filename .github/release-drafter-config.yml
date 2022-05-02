@@ -27,7 +27,7 @@ replacers:
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 change-title-escapes: '\<*_&'
 version-template: $MAJOR.$MINOR.0-next.$PATCH
-prerelease: true,
+prerelease: true
 version-resolver:
   major:
     labels:
