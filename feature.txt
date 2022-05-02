@@ -6,3 +6,5 @@ Test main release drafting
 
 This is a fix
 This is another fix
+
+This is a feature
