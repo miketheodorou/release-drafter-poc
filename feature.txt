@@ -5,6 +5,6 @@ Testing the "chore" auto-labeler
 Test main release drafting
 
 This is a fix
-This is another fix
+This is another fixx
 
 This is a feature
